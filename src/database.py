@@ -48,7 +48,8 @@ class Database:
                 'IsTarget': row[13],
             }
 
-            triggers_objs_list.append(obj)
+            if len(obj['Text']) > 0:
+                triggers_objs_list.append(obj)
 
 
         return triggers_objs_list
@@ -71,8 +72,8 @@ class Database:
                 'EmotionMark': row[9],
                 'IsTarget': row[10]
             }
-
-            triggers_objs_list.append(obj)
+            if len(obj['Text']) > 0:
+                triggers_objs_list.append(obj)
 
         return triggers_objs_list
 
@@ -175,7 +176,6 @@ class Database:
 
             print("\nPrinting each laptop record")
 
-            #{'TriggerId': 1, 'Name': 'губернатор'}
             if db_name == "TriggerWord":
                 return self.get_trigger_word_list(records)
             if db_name == "WallPost":
