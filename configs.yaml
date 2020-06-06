@@ -1,0 +1,6 @@
+database:
+  host: 'services.cashee.ru'
+  port: 30100
+  database: 'Altay'
+  user: 'altay'
+  password: 'altay123'
